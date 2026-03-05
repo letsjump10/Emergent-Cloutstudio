@@ -1,53 +1,43 @@
-import { useEffect } from "react";
-import "@/App.css";
+import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { Toaster } from "sonner";
+import { HelmetProvider } from "react-helmet-async";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Pages
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
+import About from "./pages/About";
+import Work from "./pages/Work";
+import CaseStudyDetail from "./pages/CaseStudyDetail";
+import Contact from "./pages/Contact";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+// Layout
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import MobileCtaBar from "./components/MobileCtaBar";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <HelmetProvider>
+      <div className="App min-h-screen bg-[#030303] text-white">
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/:serviceSlug" element={<ServiceDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/work/:caseStudySlug" element={<CaseStudyDetail />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+          <MobileCtaBar />
+          <Toaster position="top-right" theme="dark" />
+        </BrowserRouter>
+      </div>
+    </HelmetProvider>
   );
 }
 

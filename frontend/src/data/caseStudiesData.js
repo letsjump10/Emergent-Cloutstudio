@@ -1,0 +1,212 @@
+export const caseStudiesData = [
+  {
+    id: 1,
+    slug: 'local-restaurant-seo-success',
+    title: 'How a Roorkee Restaurant Doubled Foot Traffic with Local SEO',
+    category: 'SEO',
+    client: 'Mountain View Restaurant',
+    location: 'Roorkee, Uttarakhand',
+    thumbnail: 'https://images.unsplash.com/photo-1623307019152-1ee797183f1d?crop=entropy&cs=srgb&fm=jpg&q=85',
+    results: [
+      { metric: 'Google Maps Impressions', value: '+340%' },
+      { metric: 'Direct Calls from Search', value: '+250%' },
+      { metric: 'Foot Traffic', value: '+120%' },
+      { metric: 'Time to Results', value: '4 months' },
+    ],
+    problem: 'A popular local restaurant in Roorkee was struggling to appear in \"restaurants near me\" searches. They relied heavily on word-of-mouth and had minimal online visibility.',
+    strategy: [
+      'Optimized Google Business Profile with photos, menu, hours',
+      'Built local citations across 50+ directories',
+      'Created location-specific content targeting Roorkee, IIT Roorkee area',
+      'Encouraged customer reviews with QR codes',
+    ],
+    execution: [
+      'Week 1-2: Google Business Profile complete overhaul',
+      'Week 3-6: Citation building and NAP consistency',
+      'Week 7-12: Content marketing and review generation',
+      'Week 13-16: Ongoing optimization and monitoring',
+    ],
+    results_detail: 'Within 4 months, the restaurant appeared in the top 3 for \"restaurant near Roorkee\", \"best food in Roorkee\", and similar queries. Calls from Google Maps increased 250%, and foot traffic grew by 120%.',
+    testimonial: {
+      quote: 'We went from invisible to fully booked on weekends. Clout Studio understands local businesses in Uttarakhand.',
+      author: 'Rajesh Kumar',
+      position: 'Owner, Mountain View Restaurant',
+    },
+  },
+  {
+    id: 2,
+    slug: 'ecommerce-ppc-campaign',
+    title: 'E-commerce Store Achieves 4.2x ROAS with Meta Ads',
+    category: 'PPC',
+    client: 'Himalayan Crafts Co.',
+    location: 'Dehradun, Uttarakhand',
+    thumbnail: 'https://images.unsplash.com/photo-1753998941540-081eed4f6397?crop=entropy&cs=srgb&fm=jpg&q=85',
+    results: [
+      { metric: 'ROAS (Return on Ad Spend)', value: '4.2x' },
+      { metric: 'Cost Per Acquisition', value: '-62%' },
+      { metric: 'Revenue from Ads', value: '\u20b98.4L in 3 months' },
+      { metric: 'Conversion Rate', value: '+180%' },
+    ],
+    problem: 'An e-commerce store selling handmade Himalayan crafts was spending \u20b950k/month on ads with poor returns (1.5x ROAS). Their targeting and creatives were not optimized.',
+    strategy: [
+      'Complete audience research and custom audience building',
+      'Created high-converting video ads showcasing product stories',
+      'Rebuilt landing pages for mobile conversions',
+      'Implemented retargeting campaigns with dynamic product ads',
+    ],
+    execution: [
+      'Month 1: Audience research, ad creative production, landing page redesign',
+      'Month 2: Campaign launch with A/B testing (10+ ad variations)',
+      'Month 3: Optimization based on data, scaling winning ads',
+    ],
+    results_detail: 'Achieved 4.2x ROAS (from 1.5x), reduced CPA by 62%, and generated \u20b98.4L in revenue. The campaign scaled to \u20b91.2L/month ad spend profitably.',
+    testimonial: {
+      quote: 'Our business completely transformed. Clout Studio turned our ads from a cost center to a profit machine.',
+      author: 'Priya Sharma',
+      position: 'Founder, Himalayan Crafts Co.',
+    },
+  },
+  {
+    id: 3,
+    slug: 'social-media-growth-coaching',
+    title: 'Coaching Business Grows Instagram from 800 to 25k in 6 Months',
+    category: 'Social',
+    client: 'Peak Performance Coaching',
+    location: 'Haridwar, Uttarakhand',
+    thumbnail: 'https://images.unsplash.com/photo-1623307019152-1ee797183f1d?crop=entropy&cs=srgb&fm=jpg&q=85',
+    results: [
+      { metric: 'Instagram Followers', value: '800 → 25,000' },
+      { metric: 'Engagement Rate', value: '8.4% avg' },
+      { metric: 'Leads per Month', value: '+340%' },
+      { metric: 'Course Sales', value: '+\u20b918L' },
+    ],
+    problem: 'A fitness and mindset coach had great content but no reach. Stuck at 800 followers with 2-3% engagement. Needed to build authority and attract clients.',
+    strategy: [
+      'Content calendar focused on transformational stories',
+      'Daily reels using trending audio and formats',
+      'Engagement pods and strategic commenting',
+      'Collaborations with local influencers in Uttarakhand',
+    ],
+    execution: [
+      'Month 1-2: Content strategy and daily posting cadence',
+      'Month 3-4: Reels production (3-4 per week)',
+      'Month 5-6: Collaborations and paid promotion of top posts',
+    ],
+    results_detail: 'Followers grew from 800 to 25,000 in 6 months. Average engagement rate of 8.4%. Generated 140+ qualified leads monthly, resulting in \u20b918L+ in course sales.',
+    testimonial: {
+      quote: 'I went from shouting into the void to having a waitlist for my coaching programs. Clout Studio knows Instagram inside out.',
+      author: 'Vikram Singh',
+      position: 'Founder, Peak Performance Coaching',
+    },
+  },
+  {
+    id: 4,
+    slug: 'website-redesign-conversion-boost',
+    title: 'SaaS Website Redesign Increases Signups by 165%',
+    category: 'Website',
+    client: 'CloudSync Pro',
+    location: 'Roorkee (Remote Team)',
+    thumbnail: 'https://images.unsplash.com/photo-1700313238493-954af98df086?crop=entropy&cs=srgb&fm=jpg&q=85',
+    results: [
+      { metric: 'Free Trial Signups', value: '+165%' },
+      { metric: 'Bounce Rate', value: '-42%' },
+      { metric: 'Page Load Speed', value: '4.2s → 1.1s' },
+      { metric: 'Mobile Conversions', value: '+210%' },
+    ],
+    problem: 'A SaaS startup had a slow, confusing website. High bounce rate (68%), low signups (12/month), and poor mobile experience.',
+    strategy: [
+      'Complete UX audit and user journey mapping',
+      'Redesigned with clear value proposition and CTAs',
+      'Migrated to modern stack for speed (React + Next.js)',
+      'A/B tested headline and pricing page variations',
+    ],
+    execution: [
+      'Week 1-2: UX audit and wireframing',
+      'Week 3-5: Design and development',
+      'Week 6: Launch and A/B testing setup',
+      'Week 7-8: Optimization based on data',
+    ],
+    results_detail: 'Signups increased from 12/month to 32/month (+165%). Bounce rate dropped to 39%. Page load speed improved from 4.2s to 1.1s. Mobile conversions tripled.',
+    testimonial: {
+      quote: 'Our website went from a blocker to our #1 sales tool. The results speak for themselves.',
+      author: 'Amit Verma',
+      position: 'CEO, CloudSync Pro',
+    },
+  },
+  {
+    id: 5,
+    slug: 'whatsapp-automation-real-estate',
+    title: 'Real Estate Agency Qualifies 300+ Leads/Month with WhatsApp Bot',
+    category: 'Automation',
+    client: 'Ganga Realty',
+    location: 'Haridwar, Uttarakhand',
+    thumbnail: 'https://images.unsplash.com/photo-1758518729685-f88df7890776?crop=entropy&cs=srgb&fm=jpg&q=85',
+    results: [
+      { metric: 'Leads Qualified Automatically', value: '300+/month' },
+      { metric: 'Response Time', value: 'Instant (24/7)' },
+      { metric: 'Sales Team Time Saved', value: '80 hours/month' },
+      { metric: 'Conversion Rate', value: '+45%' },
+    ],
+    problem: 'A real estate agency was overwhelmed with WhatsApp inquiries. Sales team spent 80% of time answering basic questions, missing follow-ups.',
+    strategy: [
+      'Built WhatsApp chatbot to handle FAQs (pricing, location, amenities)',
+      'Integrated lead qualification (budget, timeline, preferences)',
+      'Routed qualified leads to sales team via CRM',
+      'Set up automated follow-ups for cold leads',
+    ],
+    execution: [
+      'Week 1: Use case mapping and flow design',
+      'Week 2-3: Bot development and testing',
+      'Week 4: Integration with CRM and launch',
+      'Week 5+: Monitoring and optimization',
+    ],
+    results_detail: 'The bot now handles 300+ inquiries per month, qualifying leads instantly. Sales team focuses only on high-intent buyers. Conversion rate improved 45% due to faster response.',
+    testimonial: {
+      quote: 'This bot is like having 3 full-time sales reps working 24/7. Game changer for our business.',
+      author: 'Suresh Mehta',
+      position: 'Director, Ganga Realty',
+    },
+  },
+  {
+    id: 6,
+    slug: 'local-service-business-growth',
+    title: 'Plumbing Service Gets 120 Calls/Month from Google Ads',
+    category: 'PPC',
+    client: 'QuickFix Plumbing',
+    location: 'Roorkee & Haridwar',
+    thumbnail: 'https://images.unsplash.com/photo-1753998941540-081eed4f6397?crop=entropy&cs=srgb&fm=jpg&q=85',
+    results: [
+      { metric: 'Phone Calls from Ads', value: '120+/month' },
+      { metric: 'Cost Per Call', value: '\u20b9142' },
+      { metric: 'Booking Rate', value: '68%' },
+      { metric: 'Revenue from Ads', value: '+\u20b94.2L/month' },
+    ],
+    problem: 'A local plumbing service relied on referrals and had inconsistent work. Wanted to scale with paid ads but didn\u2019t know where to start.',
+    strategy: [
+      'Hyper-local Google Ads targeting \"plumber near me\" in Roorkee, Haridwar',
+      'Call-only ads with phone number extension',
+      'Landing page with trust signals (reviews, certifications)',
+      'Emergency service highlighting (24/7 availability)',
+    ],
+    execution: [
+      'Week 1: Campaign setup and landing page',
+      'Week 2-4: Launch and bid optimization',
+      'Month 2-3: Scaling and expanding service area',
+    ],
+    results_detail: 'Generated 120+ calls per month at \u20b9142 per call. 68% of calls converted to bookings. Monthly revenue from ads: \u20b94.2L+. Now the #1 plumber in their service area.',
+    testimonial: {
+      quote: 'We went from struggling to find work to turning customers away. Best investment we ever made.',
+      author: 'Ramesh Thakur',
+      position: 'Owner, QuickFix Plumbing',
+    },
+  },
+];
+
+export const getCaseStudyBySlug = (slug) => {
+  return caseStudiesData.find((cs) => cs.slug === slug);
+};
+
+export const getCaseStudiesByCategory = (category) => {
+  if (category === 'All') return caseStudiesData;
+  return caseStudiesData.filter((cs) => cs.category === category);
+};
