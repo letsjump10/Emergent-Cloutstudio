@@ -60,7 +60,6 @@ const LeadFormSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Validation
     if (!formData.name || !formData.email || !formData.phone) {
       toast.error('Please fill in all required fields');
       return;
@@ -92,18 +91,18 @@ const LeadFormSection = () => {
 
   if (isSuccess) {
     return (
-      <section className="py-24 bg-gradient-to-b from-[#0A0A0A] to-[#030303]" data-testid="lead-form-success">
+      <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-orange-50" data-testid="lead-form-success">
         <div className="max-w-2xl mx-auto px-6 md:px-12 text-center">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-            className="w-24 h-24 mx-auto mb-6 bg-neon-cyan/10 border-2 border-neon-cyan flex items-center justify-center"
+            className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-brand-blue to-brand-orange flex items-center justify-center rounded-full"
           >
-            <CheckCircle size={48} className="text-neon-cyan" />
+            <CheckCircle size={48} className="text-white" />
           </motion.div>
           <h2 className="text-3xl font-syne font-bold mb-4">Thank You!</h2>
-          <p className="text-white/70 mb-8">
+          <p className="text-black mb-8">
             We've received your inquiry. Our team will reach out within 24 hours to discuss your project.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -111,7 +110,7 @@ const LeadFormSection = () => {
               href="https://wa.me/919740959176"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 btn-primary flex items-center gap-2"
+              className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg flex items-center gap-2 transition-colors"
               data-testid="whatsapp-cta"
             >
               <MessageCircle size={20} />
@@ -119,7 +118,7 @@ const LeadFormSection = () => {
             </a>
             <button
               onClick={() => setIsSuccess(false)}
-              className="px-8 py-3 btn-secondary"
+              className="px-8 py-3 btn-secondary rounded-lg"
             >
               <span>Submit Another Inquiry</span>
             </button>
@@ -130,7 +129,7 @@ const LeadFormSection = () => {
   }
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#0A0A0A] to-[#030303]" data-testid="lead-form-section">
+    <section className="py-24 bg-gray-50" data-testid="lead-form-section">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -142,7 +141,7 @@ const LeadFormSection = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-syne font-bold mb-4">
             Ready to Grow Your Business?
           </h2>
-          <p className="text-lg text-white/60">
+          <p className="text-lg text-black">
             Fill out the form below or WhatsApp us directly for a free consultation
           </p>
         </motion.div>
@@ -154,13 +153,13 @@ const LeadFormSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
             onSubmit={handleSubmit}
-            className="glass-panel p-8 space-y-6"
+            className="bg-white border border-gray-200 rounded-lg p-8 space-y-6"
             data-testid="lead-form"
           >
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium mb-2">
-                  Name <span className="text-neon-cyan">*</span>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Name <span className="text-brand-orange">*</span>
                 </label>
                 <input
                   type="text"
@@ -168,14 +167,14 @@ const LeadFormSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 focus:border-brand-blue outline-none transition-colors rounded-lg text-black"
                   placeholder="Your full name"
                   data-testid="lead-form-name"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">
-                  Phone <span className="text-neon-cyan">*</span>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Phone <span className="text-brand-orange">*</span>
                 </label>
                 <input
                   type="tel"
@@ -183,7 +182,7 @@ const LeadFormSection = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 focus:border-brand-blue outline-none transition-colors rounded-lg text-black"
                   placeholder="10-digit mobile number"
                   data-testid="lead-form-phone"
                 />
@@ -192,8 +191,8 @@ const LeadFormSection = () => {
 
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium mb-2">
-                  Email <span className="text-neon-cyan">*</span>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Email <span className="text-brand-orange">*</span>
                 </label>
                 <input
                   type="email"
@@ -201,19 +200,19 @@ const LeadFormSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 focus:border-brand-blue outline-none transition-colors rounded-lg text-black"
                   placeholder="your@email.com"
                   data-testid="lead-form-email"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Business Name</label>
+                <label className="block text-sm font-medium mb-2 text-black">Business Name</label>
                 <input
                   type="text"
                   name="business_name"
                   value={formData.business_name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 focus:border-brand-blue outline-none transition-colors rounded-lg text-black"
                   placeholder="Your business name"
                   data-testid="lead-form-business"
                 />
@@ -221,20 +220,20 @@ const LeadFormSection = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Website (if any)</label>
+              <label className="block text-sm font-medium mb-2 text-black">Website (if any)</label>
               <input
                 type="url"
                 name="website"
                 value={formData.website}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors"
+                className="w-full px-4 py-3 bg-white border border-gray-200 focus:border-brand-blue outline-none transition-colors rounded-lg text-black"
                 placeholder="https://yourwebsite.com"
                 data-testid="lead-form-website"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-3">What do you need? (Select all that apply)</label>
+              <label className="block text-sm font-medium mb-3 text-black">What do you need? (Select all that apply)</label>
               <div className="grid sm:grid-cols-2 gap-3">
                 {serviceOptions.map((service) => (
                   <label
@@ -245,9 +244,9 @@ const LeadFormSection = () => {
                       type="checkbox"
                       checked={formData.services.includes(service)}
                       onChange={() => handleServiceToggle(service)}
-                      className="w-5 h-5 bg-white/5 border border-white/10 checked:bg-neon-cyan checked:border-neon-cyan cursor-pointer"
+                      className="w-5 h-5 border-2 border-gray-300 checked:bg-brand-blue checked:border-brand-blue cursor-pointer rounded"
                     />
-                    <span className="text-sm text-white/70 group-hover:text-white transition-colors">
+                    <span className="text-sm text-black group-hover:text-brand-blue transition-colors">
                       {service}
                     </span>
                   </label>
@@ -257,12 +256,12 @@ const LeadFormSection = () => {
 
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium mb-2">Monthly Budget</label>
+                <label className="block text-sm font-medium mb-2 text-black">Monthly Budget</label>
                 <select
                   name="monthly_budget"
                   value={formData.monthly_budget}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 focus:border-brand-blue outline-none transition-colors rounded-lg text-black"
                   data-testid="lead-form-budget"
                 >
                   <option value="">Select budget range</option>
@@ -274,12 +273,12 @@ const LeadFormSection = () => {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Preferred Callback Time</label>
+                <label className="block text-sm font-medium mb-2 text-black">Preferred Callback Time</label>
                 <select
                   name="callback_time"
                   value={formData.callback_time}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 focus:border-brand-blue outline-none transition-colors rounded-lg text-black"
                   data-testid="lead-form-callback"
                 >
                   <option value="">Select time</option>
@@ -291,13 +290,13 @@ const LeadFormSection = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Message</label>
+              <label className="block text-sm font-medium mb-2 text-black">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors resize-none"
+                className="w-full px-4 py-3 bg-white border border-gray-200 focus:border-brand-blue outline-none transition-colors resize-none rounded-lg text-black"
                 placeholder="Tell us more about your project or goals..."
                 data-testid="lead-form-message"
               />
@@ -306,7 +305,7 @@ const LeadFormSection = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full px-8 py-4 btn-primary flex items-center justify-center gap-2 disabled:opacity-50"
+              className="w-full px-8 py-4 btn-primary rounded-lg flex items-center justify-center gap-2 disabled:opacity-50"
               data-testid="lead-form-submit"
             >
               <Send size={20} />
@@ -319,15 +318,15 @@ const LeadFormSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="glass-panel p-8 space-y-6 md:w-80"
+            className="bg-white border border-gray-200 rounded-lg p-8 space-y-6 md:w-80"
           >
             <div>
-              <h3 className="text-xl font-syne font-bold mb-4">Or Message Us Directly</h3>
+              <h3 className="text-xl font-syne font-bold mb-4 text-black">Or Message Us Directly</h3>
               <a
                 href="https://wa.me/919740959176"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium flex items-center justify-center gap-2 transition-colors"
+                className="w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium flex items-center justify-center gap-2 transition-colors rounded-lg"
                 data-testid="whatsapp-direct-btn"
               >
                 <MessageCircle size={20} />
@@ -335,19 +334,19 @@ const LeadFormSection = () => {
               </a>
             </div>
 
-            <div className="pt-6 border-t border-white/10">
-              <h4 className="font-semibold mb-3">What Happens Next?</h4>
-              <ul className="space-y-2 text-sm text-white/70">
+            <div className="pt-6 border-t border-gray-200">
+              <h4 className="font-semibold mb-3 text-black">What Happens Next?</h4>
+              <ul className="space-y-2 text-sm text-black">
                 <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-neon-cyan rounded-full mt-1.5 flex-shrink-0" />
+                  <div className="w-1.5 h-1.5 bg-brand-blue rounded-full mt-1.5 flex-shrink-0" />
                   <span>We'll review your inquiry within 24 hours</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-neon-cyan rounded-full mt-1.5 flex-shrink-0" />
+                  <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mt-1.5 flex-shrink-0" />
                   <span>Free 30-minute strategy call</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-neon-cyan rounded-full mt-1.5 flex-shrink-0" />
+                  <div className="w-1.5 h-1.5 bg-brand-blue rounded-full mt-1.5 flex-shrink-0" />
                   <span>Custom proposal tailored to your goals</span>
                 </li>
               </ul>

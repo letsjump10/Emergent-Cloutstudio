@@ -86,7 +86,7 @@ const Contact = () => {
 
       <main className="pt-24 pb-16">
         {/* Hero */}
-        <section className="py-16 bg-[#0A0A0A] relative overflow-hidden">
+        <section className="py-16 bg-white relative overflow-hidden">
           <div className="absolute inset-0 grid-overlay opacity-20" />
           <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 text-center">
             <motion.div
@@ -95,9 +95,9 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-syne font-bold mb-6">
-                Get In <span className="text-neon-cyan">Touch</span>
+                Get In <span className="text-brand-blue">Touch</span>
               </h1>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              <p className="text-xl text-black max-w-3xl mx-auto">
                 Ready to grow your business? Let's talk. Free consultation, no obligation.
               </p>
             </motion.div>
@@ -105,7 +105,7 @@ const Contact = () => {
         </section>
 
         {/* Contact Info & Form */}
-        <section className="py-16 bg-[#030303]">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="grid lg:grid-cols-[1fr_2fr] gap-12">
               {/* Contact Info */}
@@ -119,48 +119,48 @@ const Contact = () => {
                   <h2 className="text-2xl font-syne font-bold mb-6">Contact Information</h2>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 flex items-center justify-center glass-panel border-neon-cyan/30 flex-shrink-0">
-                        <Phone size={24} className="text-neon-cyan" />
+                      <div className="w-12 h-12 flex items-center justify-center glass-panel border-brand-blue/30 flex-shrink-0">
+                        <Phone size={24} className="text-brand-blue" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Phone</h3>
-                        <a href="tel:9740959176" className="text-white/70 hover:text-neon-cyan transition-colors">
+                        <a href="tel:9740959176" className="text-black hover:text-brand-blue transition-colors">
                           +91 97409 59176
                         </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 flex items-center justify-center glass-panel border-neon-cyan/30 flex-shrink-0">
-                        <Mail size={24} className="text-neon-cyan" />
+                      <div className="w-12 h-12 flex items-center justify-center glass-panel border-brand-blue/30 flex-shrink-0">
+                        <Mail size={24} className="text-brand-blue" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <a href="mailto:hello@cloutstudio.co" className="text-white/70 hover:text-neon-cyan transition-colors">
+                        <a href="mailto:hello@cloutstudio.co" className="text-black hover:text-brand-blue transition-colors">
                           hello@cloutstudio.co
                         </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 flex items-center justify-center glass-panel border-neon-cyan/30 flex-shrink-0">
-                        <MapPin size={24} className="text-neon-cyan" />
+                      <div className="w-12 h-12 flex items-center justify-center glass-panel border-brand-blue/30 flex-shrink-0">
+                        <MapPin size={24} className="text-brand-blue" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Location</h3>
-                        <p className="text-white/70">
+                        <p className="text-black">
                           Roorkee, Uttarakhand 247667<br />India
                         </p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 flex items-center justify-center glass-panel border-neon-cyan/30 flex-shrink-0">
-                        <Clock size={24} className="text-neon-cyan" />
+                      <div className="w-12 h-12 flex items-center justify-center glass-panel border-brand-blue/30 flex-shrink-0">
+                        <Clock size={24} className="text-brand-blue" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Business Hours</h3>
-                        <p className="text-white/70">
+                        <p className="text-black">
                           Monday - Saturday<br />9:00 AM - 6:00 PM IST
                         </p>
                       </div>
@@ -170,7 +170,7 @@ const Contact = () => {
 
                 <div className="glass-panel p-6">
                   <h3 className="font-syne font-bold mb-4">Quick Response Promise</h3>
-                  <ul className="space-y-2 text-sm text-white/70">
+                  <ul className="space-y-2 text-sm text-black">
                     <li className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 bg-neon-cyan rounded-full mt-1.5 flex-shrink-0" />
                       <span>Email responses within 24 hours</span>
@@ -210,12 +210,12 @@ const Contact = () => {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                      className="w-24 h-24 mx-auto mb-6 bg-neon-cyan/10 border-2 border-neon-cyan flex items-center justify-center"
+                      className="w-24 h-24 mx-auto mb-6 bg-neon-cyan/10 border-2 border-brand-blue flex items-center justify-center"
                     >
-                      <CheckCircle size={48} className="text-neon-cyan" />
+                      <CheckCircle size={48} className="text-brand-blue" />
                     </motion.div>
                     <h2 className="text-3xl font-syne font-bold mb-4">Message Sent!</h2>
-                    <p className="text-white/70 mb-8">
+                    <p className="text-black mb-8">
                       Thank you for reaching out. We'll get back to you within 24 hours.
                     </p>
                     <button
@@ -234,7 +234,7 @@ const Contact = () => {
 
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Name <span className="text-neon-cyan">*</span>
+                        Name <span className="text-brand-blue">*</span>
                       </label>
                       <input
                         type="text"
@@ -242,7 +242,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-white/5 border border-gray-200 focus:border-brand-blue outline-none transition-colors"
                         placeholder="Your full name"
                         data-testid="contact-form-name"
                       />
@@ -251,7 +251,7 @@ const Contact = () => {
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium mb-2">
-                          Email <span className="text-neon-cyan">*</span>
+                          Email <span className="text-brand-blue">*</span>
                         </label>
                         <input
                           type="email"
@@ -259,14 +259,14 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-gray-200 focus:border-brand-blue outline-none transition-colors"
                           placeholder="your@email.com"
                           data-testid="contact-form-email"
                         />
                       </div>
                       <div>
                         <label className="block text-sm font-medium mb-2">
-                          Phone <span className="text-neon-cyan">*</span>
+                          Phone <span className="text-brand-blue">*</span>
                         </label>
                         <input
                           type="tel"
@@ -274,7 +274,7 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-gray-200 focus:border-brand-blue outline-none transition-colors"
                           placeholder="10-digit mobile number"
                           data-testid="contact-form-phone"
                         />
@@ -283,7 +283,7 @@ const Contact = () => {
 
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Message <span className="text-neon-cyan">*</span>
+                        Message <span className="text-brand-blue">*</span>
                       </label>
                       <textarea
                         name="message"
@@ -291,7 +291,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         rows={6}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-neon-cyan outline-none transition-colors resize-none"
+                        className="w-full px-4 py-3 bg-white/5 border border-gray-200 focus:border-brand-blue outline-none transition-colors resize-none"
                         placeholder="Tell us about your project, goals, or questions..."
                         data-testid="contact-form-message"
                       />
@@ -314,7 +314,7 @@ const Contact = () => {
         </section>
 
         {/* Map */}
-        <section className="py-16 bg-[#0A0A0A]">
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -324,7 +324,7 @@ const Contact = () => {
               className="text-center mb-8"
             >
               <h2 className="text-3xl font-syne font-bold mb-4">Find Us</h2>
-              <p className="text-white/60">Based in Roorkee, serving businesses across Uttarakhand and India</p>
+              <p className="text-gray-600">Based in Roorkee, serving businesses across Uttarakhand and India</p>
             </motion.div>
 
             <motion.div

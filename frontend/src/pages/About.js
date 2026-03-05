@@ -40,7 +40,7 @@ const About = () => {
 
       <main className="pt-24 pb-16">
         {/* Hero */}
-        <section className="py-16 bg-[#0A0A0A] relative overflow-hidden">
+        <section className="py-16 bg-white relative overflow-hidden">
           <div className="absolute inset-0 grid-overlay opacity-20" />
           <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
             <motion.div
@@ -50,9 +50,9 @@ const About = () => {
               className="text-center"
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-syne font-bold mb-6">
-                About <span className="text-neon-cyan">Clout Studio</span>
+                About <span className="text-brand-blue">Clout Studio</span>
               </h1>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              <p className="text-xl text-black max-w-3xl mx-auto">
                 Your growth partner in Roorkee, Uttarakhand. We help businesses scale with data-driven digital marketing.
               </p>
             </motion.div>
@@ -60,7 +60,7 @@ const About = () => {
         </section>
 
         {/* Mission */}
-        <section className="py-16 bg-[#030303]">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -70,13 +70,13 @@ const About = () => {
                 transition={{ duration: 0.6 }}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <Eye size={48} className="text-neon-cyan" />
+                  <Eye size={48} className="text-brand-blue" />
                   <h2 className="text-3xl font-syne font-bold">Our Mission</h2>
                 </div>
-                <p className="text-white/70 leading-relaxed mb-4">
+                <p className="text-black leading-relaxed mb-4">
                   We exist to make high-quality digital marketing accessible to businesses in Roorkee, Haridwar, Dehradun, and across India.
                 </p>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-black leading-relaxed">
                   Too many great businesses are held back by poor online presence. We're here to change that. Our goal is simple: drive real results that impact your bottom line.
                 </p>
               </motion.div>
@@ -94,7 +94,7 @@ const About = () => {
                   className="w-full h-64 object-cover mb-6"
                 />
                 <h3 className="text-xl font-syne font-bold mb-3">Why Roorkee?</h3>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-black leading-relaxed">
                   Roorkee is our home. We understand the local market, the challenges businesses face here, and the opportunities that exist. Being local means we're always available, always invested, and always committed to seeing our community thrive.
                 </p>
               </motion.div>
@@ -103,7 +103,7 @@ const About = () => {
         </section>
 
         {/* Values */}
-        <section className="py-16 bg-[#0A0A0A]">
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -113,7 +113,7 @@ const About = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl sm:text-4xl font-syne font-bold mb-4">Our Values</h2>
-              <p className="text-white/60 max-w-2xl mx-auto">
+              <p className="text-gray-600 max-w-2xl mx-auto">
                 The principles that guide how we work with every client
               </p>
             </motion.div>
@@ -128,13 +128,13 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
-                    className="glass-panel p-6 text-center hover:border-neon-cyan/50 transition-colors duration-300"
+                    className="glass-panel p-6 text-center hover:border-brand-blue/50 transition-colors duration-300"
                   >
-                    <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center glass-panel border-neon-cyan/30">
-                      <Icon size={32} className="text-neon-cyan" />
+                    <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center glass-panel border-brand-blue/30">
+                      <Icon size={32} className="text-brand-blue" />
                     </div>
                     <h3 className="text-xl font-syne font-bold mb-3">{value.title}</h3>
-                    <p className="text-sm text-white/60">{value.description}</p>
+                    <p className="text-sm text-gray-600">{value.description}</p>
                   </motion.div>
                 );
               })}
@@ -143,7 +143,7 @@ const About = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-16 bg-[#030303]">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ const About = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl sm:text-4xl font-syne font-bold mb-4">Meet the Team</h2>
-              <p className="text-white/60 max-w-2xl mx-auto">
+              <p className="text-gray-600 max-w-2xl mx-auto">
                 Experienced marketers, designers, and strategists committed to your success
               </p>
             </motion.div>
@@ -170,10 +170,10 @@ const About = () => {
                 alt="Team working together"
                 className="w-full h-96 object-cover mb-8"
               />
-              <p className="text-white/70 leading-relaxed max-w-3xl mx-auto mb-6">
+              <p className="text-black leading-relaxed max-w-3xl mx-auto mb-6">
                 Our team combines years of experience in digital marketing, design, development, and business strategy. We've helped dozens of businesses across Uttarakhand and India achieve their growth goals.
               </p>
-              <p className="text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-black leading-relaxed max-w-3xl mx-auto">
                 What sets us apart? We don't just execute campaigns - we become an extension of your team. Your wins are our wins. Your challenges are ours to solve.
               </p>
             </motion.div>
@@ -181,7 +181,7 @@ const About = () => {
         </section>
 
         {/* Local Presence */}
-        <section className="py-16 bg-[#0A0A0A]">
+        <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-6 md:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -191,21 +191,21 @@ const About = () => {
               className="glass-panel p-8 md:p-12"
             >
               <div className="flex items-center gap-4 mb-6">
-                <MapPin size={48} className="text-neon-cyan" />
+                <MapPin size={48} className="text-brand-blue" />
                 <h2 className="text-3xl font-syne font-bold">Serving Uttarakhand</h2>
               </div>
-              <p className="text-white/70 leading-relaxed mb-6">
+              <p className="text-black leading-relaxed mb-6">
                 While we're based in Roorkee, we actively serve businesses across Uttarakhand including:
               </p>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
                 {['Roorkee', 'Haridwar', 'Dehradun', 'Rishikesh', 'Haldwani', 'Nainital', 'Rudrapur', 'Kashipur'].map((city) => (
                   <div key={city} className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-neon-cyan rounded-full" />
-                    <span className="text-white/70">{city}</span>
+                    <span className="text-black">{city}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-white/70 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 And of course, we work with clients across India and globally through remote collaboration.
               </p>
             </motion.div>
@@ -213,10 +213,10 @@ const About = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-neon-cyan/10 via-purple-500/10 to-neon-cyan/10 border-y border-white/5">
+        <section className="py-16 bg-gradient-to-r from-neon-cyan/10 via-purple-500/10 to-neon-cyan/10 border-y border-gray-200">
           <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
             <h2 className="text-3xl font-syne font-bold mb-4">Ready to Work Together?</h2>
-            <p className="text-white/70 mb-8">
+            <p className="text-black mb-8">
               Let's discuss your goals and create a custom growth plan for your business.
             </p>
             <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 btn-primary group">

@@ -43,10 +43,10 @@ const ServiceDetail = () => {
 
       <main className="pt-24 pb-16">
         {/* Hero */}
-        <section className="py-16 bg-[#0A0A0A] relative overflow-hidden">
+        <section className="py-16 bg-white relative overflow-hidden">
           <div className="absolute inset-0 grid-overlay opacity-20" />
           <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
-            <Link to="/services" className="inline-flex items-center gap-2 text-neon-cyan hover:underline mb-8">
+            <Link to="/services" className="inline-flex items-center gap-2 text-brand-blue hover:underline mb-8">
               <ArrowLeft size={20} />
               <span>Back to Services</span>
             </Link>
@@ -59,20 +59,20 @@ const ServiceDetail = () => {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-syne font-bold mb-6">
                 {service.name}
               </h1>
-              <p className="text-xl text-white/70 max-w-3xl mb-8">{service.description}</p>
+              <p className="text-xl text-black max-w-3xl mb-8">{service.description}</p>
               
               <div className="flex flex-wrap items-center gap-8">
                 <div className="flex items-center gap-3">
-                  <Clock size={24} className="text-neon-cyan" />
+                  <Clock size={24} className="text-brand-blue" />
                   <div>
-                    <div className="text-sm text-white/60">Timeline</div>
+                    <div className="text-sm text-gray-600">Timeline</div>
                     <div className="font-semibold">{service.timeline}</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Users size={24} className="text-neon-cyan" />
+                  <Users size={24} className="text-brand-blue" />
                   <div>
-                    <div className="text-sm text-white/60">Tools Used</div>
+                    <div className="text-sm text-gray-600">Tools Used</div>
                     <div className="font-semibold">{service.toolsStack.slice(0, 2).join(', ')}</div>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const ServiceDetail = () => {
         </section>
 
         {/* Who It's For */}
-        <section className="py-16 bg-[#030303]">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="grid md:grid-cols-2 gap-12">
               <motion.div
@@ -95,8 +95,8 @@ const ServiceDetail = () => {
                 <ul className="space-y-4">
                   {service.whoItsFor.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle size={24} className="text-neon-cyan flex-shrink-0 mt-0.5" />
-                      <span className="text-white/70">{item}</span>
+                      <CheckCircle size={24} className="text-brand-blue flex-shrink-0 mt-0.5" />
+                      <span className="text-black">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -112,8 +112,8 @@ const ServiceDetail = () => {
                 <ul className="space-y-4">
                   {service.deliverables.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle size={24} className="text-neon-cyan flex-shrink-0 mt-0.5" />
-                      <span className="text-white/70">{item}</span>
+                      <CheckCircle size={24} className="text-brand-blue flex-shrink-0 mt-0.5" />
+                      <span className="text-black">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -123,7 +123,7 @@ const ServiceDetail = () => {
         </section>
 
         {/* Process */}
-        <section className="py-16 bg-[#0A0A0A]">
+        <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-6 md:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -133,7 +133,7 @@ const ServiceDetail = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-syne font-bold mb-4">Our Process</h2>
-              <p className="text-white/60">How we deliver {service.name.toLowerCase()}</p>
+              <p className="text-gray-600">How we deliver {service.name.toLowerCase()}</p>
             </motion.div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -146,8 +146,8 @@ const ServiceDetail = () => {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   className="glass-panel p-6 text-center"
                 >
-                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center glass-panel border-neon-cyan/30">
-                    <span className="text-xl font-syne font-bold text-neon-cyan">{index + 1}</span>
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center glass-panel border-brand-blue/30">
+                    <span className="text-xl font-syne font-bold text-brand-blue">{index + 1}</span>
                   </div>
                   <h3 className="font-semibold mb-2">{step}</h3>
                 </motion.div>
@@ -157,7 +157,7 @@ const ServiceDetail = () => {
         </section>
 
         {/* Tools */}
-        <section className="py-16 bg-[#030303]">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-5xl mx-auto px-6 md:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -171,7 +171,7 @@ const ServiceDetail = () => {
                 {service.toolsStack.map((tool) => (
                   <span
                     key={tool}
-                    className="px-4 py-2 glass-panel border-neon-cyan/30 text-sm font-medium"
+                    className="px-4 py-2 glass-panel border-brand-blue/30 text-sm font-medium"
                   >
                     {tool}
                   </span>
@@ -182,7 +182,7 @@ const ServiceDetail = () => {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-[#0A0A0A]">
+        <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-6 md:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -199,12 +199,12 @@ const ServiceDetail = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="glass-panel border-white/10 px-6"
+                  className="glass-panel border-gray-200 px-6"
                 >
-                  <AccordionTrigger className="text-left font-syne font-bold hover:text-neon-cyan transition-colors">
+                  <AccordionTrigger className="text-left font-syne font-bold hover:text-brand-blue transition-colors">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/70 leading-relaxed">
+                  <AccordionContent className="text-black leading-relaxed">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
