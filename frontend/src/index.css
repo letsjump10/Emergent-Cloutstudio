@@ -40,14 +40,14 @@
     }
     
     body {
-        @apply bg-white text-foreground font-dm antialiased;
+        @apply bg-white text-black font-dm antialiased;
         margin: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
     
     h1, h2, h3, h4, h5, h6 {
-        @apply font-syne font-bold tracking-tight text-gray-900;
+        @apply font-syne font-bold tracking-tight text-white bg-black px-4 py-2 inline-block;
     }
 }
 

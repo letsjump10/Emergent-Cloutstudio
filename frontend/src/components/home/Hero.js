@@ -29,19 +29,19 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-syne font-bold mb-8 leading-tight text-gray-900"
+            className="text-4xl sm:text-5xl lg:text-7xl font-syne font-bold mb-8 leading-tight"
             data-testid="hero-headline"
           >
-            Scale Your Business with
+            <span className="bg-black text-white px-4 py-2 inline-block mb-4">Scale Your Business with</span>
             <br />
-            <span className="gradient-text">Marketing on Autopilot</span>
+            <span className="gradient-accent text-white px-4 py-2 inline-block">Marketing on Autopilot</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-lg sm:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl text-black mb-12 max-w-3xl mx-auto leading-relaxed"
             data-testid="hero-subheadline"
           >
             We help businesses in Roorkee, Haridwar, Dehradun, and across India get more leads, sales, and growth.

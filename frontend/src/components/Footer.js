@@ -24,9 +24,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="text-2xl font-syne font-bold">
-              <span className="gradient-text">CLOUT</span>
-              <span className="text-gray-900"> STUDIO</span>
+            <div className="text-2xl font-syne font-bold flex items-center">
+              <span style={{background: 'linear-gradient(135deg, #2563EB 0%, #F97316 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>CLOUT</span>
+              <span className="text-black ml-1"> STUDIO</span>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed">
               Your growth partner in Roorkee. We help businesses across Uttarakhand and India scale with data-driven digital marketing.
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-gray-900 font-syne font-bold mb-6">Services</h3>
+            <h3 className="text-black font-syne font-bold mb-6 bg-transparent px-0 py-0">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.slug}>
@@ -66,7 +66,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-gray-900 font-syne font-bold mb-6">Quick Links</h3>
+            <h3 className="text-black font-syne font-bold mb-6 bg-transparent px-0 py-0">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -83,7 +83,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-gray-900 font-syne font-bold mb-6">Get In Touch</h3>
+            <h3 className="text-black font-syne font-bold mb-6 bg-transparent px-0 py-0">Get In Touch</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 text-gray-600 text-sm">
                 <MapPin size={18} className="mt-1 flex-shrink-0 text-brand-orange" />

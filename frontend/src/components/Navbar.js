@@ -35,9 +35,9 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-2" data-testid="logo-link">
-              <div className="text-2xl font-syne font-bold">
-                <span className="gradient-text">CLOUT</span>
-                <span className="text-gray-900"> STUDIO</span>
+              <div className="text-2xl font-syne font-bold flex items-center">
+                <span className="gradient-text" style={{background: 'linear-gradient(135deg, #2563EB 0%, #F97316 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>CLOUT</span>
+                <span className="text-black ml-1"> STUDIO</span>
               </div>
             </Link>
 
@@ -116,8 +116,8 @@ const Navbar = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`text-2xl font-syne font-bold transition-colors ${
                       location.pathname === link.path
-                        ? 'gradient-text'
-                        : 'text-gray-900 hover:text-brand-blue'
+                        ? 'text-brand-blue'
+                        : 'text-black hover:text-brand-blue'
                     }`}
                   >
                     {link.name}
