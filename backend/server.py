@@ -180,9 +180,9 @@ async def create_lead(input: LeadCreate):
     return lead_obj
 
 @api_router.get("/leads", response_model=List[Lead])
-async def get_leads():
-    """Get all leads (for admin purposes)"""
-    leads = await db.leads.find({}, {"_id": 0}).to_list(1000)
+async def get_leads(skip: int = 0, limit: int = 50):
+    """Get leads with pagination (for admin purposes)"""
+    leads = await db.leads.find({}, {"_id": 0}).sort("timestamp", -1).skip(skip).limit(limit).to_list(limit)
     
     # Convert ISO string timestamps back to datetime objects
     for lead in leads:
