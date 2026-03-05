@@ -30,9 +30,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#030303] relative overflow-hidden" data-testid="testimonials-section">
-      <div className="absolute inset-0 grid-overlay opacity-20" />
-      
+    <section className="py-24 bg-white relative overflow-hidden" data-testid="testimonials-section">
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +42,7 @@ const Testimonials = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-syne font-bold mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+          <p className="text-lg text-black max-w-2xl mx-auto">
             Real feedback from businesses we've helped grow
           </p>
         </motion.div>
@@ -57,19 +55,19 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="glass-panel p-8 hover:border-neon-cyan/30 transition-colors duration-300"
+              className="bg-white border border-gray-200 p-8 rounded-lg hover:border-brand-blue hover:shadow-lg transition-all duration-300"
               data-testid={`testimonial-${index}`}
             >
-              <Quote size={32} className="text-neon-cyan/30 mb-4" />
-              <p className="text-white/80 mb-6 leading-relaxed">"{testimonial.quote}"</p>
+              <Quote size={32} className="text-brand-orange/30 mb-4" />
+              <p className="text-black mb-6 leading-relaxed">"{testimonial.quote}"</p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-neon-cyan/10 border border-neon-cyan/30 flex items-center justify-center font-syne font-bold text-neon-cyan">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-orange flex items-center justify-center font-syne font-bold text-white rounded-lg">
                   {testimonial.author.charAt(0)}
                 </div>
                 <div>
-                  <div className="font-semibold">{testimonial.author}</div>
-                  <div className="text-sm text-white/60">{testimonial.position}</div>
-                  <div className="text-xs text-neon-cyan">{testimonial.location}</div>
+                  <div className="font-semibold text-black">{testimonial.author}</div>
+                  <div className="text-sm text-gray-600">{testimonial.position}</div>
+                  <div className="text-xs text-brand-orange">{testimonial.location}</div>
                 </div>
               </div>
             </motion.div>

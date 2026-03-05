@@ -62,7 +62,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#0A0A0A]" data-testid="pricing-section">
+    <section className="py-24 bg-gray-50" data-testid="pricing-section">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ const Pricing = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-syne font-bold mb-4">
             Transparent Pricing
           </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+          <p className="text-lg text-black max-w-2xl mx-auto">
             Choose the plan that fits your business goals. No hidden fees, no surprises.
           </p>
         </motion.div>
@@ -90,38 +90,43 @@ const Pricing = () => {
               className="relative"
             >
               {tier.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-neon-cyan text-black text-xs font-bold uppercase tracking-wider">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-brand-blue to-brand-orange text-white text-xs font-bold uppercase tracking-wider rounded-full">
                   Most Popular
                 </div>
               )}
               <div
-                className={`h-full glass-panel p-8 ${
-                  tier.popular ? 'border-neon-cyan/50 shadow-[0_0_30px_rgba(0,240,255,0.2)]' : ''
+                className={`h-full bg-white border rounded-lg p-8 ${
+                  tier.popular ? 'border-brand-blue shadow-xl' : 'border-gray-200'
                 }`}
                 data-testid={`pricing-tier-${tier.name.toLowerCase()}`}
               >
                 <div className="mb-6">
-                  <h3 className="text-2xl font-syne font-bold mb-2">{tier.name}</h3>
-                  <p className="text-sm text-neon-cyan mb-4">{tier.tagline}</p>
+                  <h3 className="text-2xl font-syne font-bold mb-2 text-black">{tier.name}</h3>
+                  <p className="text-sm text-brand-orange mb-4">{tier.tagline}</p>
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-4xl font-syne font-bold">{tier.price}</span>
-                    <span className="text-white/60">{tier.period}</span>
+                    <span className="text-4xl font-syne font-bold" style={{
+                      background: 'linear-gradient(135deg, #2563EB 0%, #F97316 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text'
+                    }}>{tier.price}</span>
+                    <span className="text-gray-600">{tier.period}</span>
                   </div>
-                  <p className="text-sm text-white/60">{tier.description}</p>
+                  <p className="text-sm text-black">{tier.description}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <Check size={20} className="text-neon-cyan flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-white/70">{feature}</span>
+                      <Check size={20} className="text-brand-blue flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-black">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <Link
                   to="/contact"
-                  className={`w-full flex items-center justify-center gap-2 px-6 py-3 ${
+                  className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg ${
                     tier.popular ? 'btn-primary' : 'btn-secondary'
                   } group`}
                 >
@@ -140,10 +145,10 @@ const Pricing = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="mt-12 text-center"
         >
-          <p className="text-white/60 mb-4">Need a custom package?</p>
+          <p className="text-black mb-4">Need a custom package?</p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 text-neon-cyan hover:underline"
+            className="inline-flex items-center gap-2 text-brand-blue hover:text-brand-orange transition-colors"
           >
             Let's talk about your specific needs
             <ArrowRight size={16} />

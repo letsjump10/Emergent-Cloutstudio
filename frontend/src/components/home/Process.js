@@ -26,9 +26,7 @@ const Process = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#030303] relative overflow-hidden" data-testid="process-section">
-      <div className="absolute inset-0 grid-overlay opacity-20" />
-      
+    <section className="py-24 bg-white relative overflow-hidden" data-testid="process-section">
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +38,7 @@ const Process = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-syne font-bold mb-4">
             How We Work
           </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+          <p className="text-lg text-black max-w-2xl mx-auto">
             A proven 4-step process that gets results, every time
           </p>
         </motion.div>
@@ -53,25 +51,25 @@ const Process = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="glass-panel p-8 hover:border-neon-cyan/50 transition-all duration-300"
+              className="bg-white border border-gray-200 p-8 rounded-lg hover:border-brand-blue hover:shadow-lg transition-all duration-300"
               data-testid={`process-step-${index}`}
             >
               <div className="grid md:grid-cols-[auto_1fr] gap-8">
                 <div className="flex md:flex-col items-center md:items-start gap-4">
-                  <div className="w-16 h-16 flex items-center justify-center glass-panel border-neon-cyan/30">
-                    <span className="text-2xl font-syne font-bold text-neon-cyan">{index + 1}</span>
+                  <div className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-brand-blue to-brand-orange rounded-lg">
+                    <span className="text-2xl font-syne font-bold text-white">{index + 1}</span>
                   </div>
-                  <div className="hidden md:block w-0.5 h-full bg-gradient-to-b from-neon-cyan/50 to-transparent" />
+                  <div className="hidden md:block w-0.5 h-full bg-gradient-to-b from-brand-blue to-brand-orange" />
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-syne font-bold mb-3">{step.title}</h3>
-                  <p className="text-white/70 mb-6">{step.description}</p>
+                  <h3 className="text-2xl font-syne font-bold mb-3 text-black">{step.title}</h3>
+                  <p className="text-black mb-6">{step.description}</p>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {step.details.map((detail) => (
                       <div key={detail} className="flex items-center gap-2">
-                        <CheckCircle size={16} className="text-neon-cyan flex-shrink-0" />
-                        <span className="text-sm text-white/60">{detail}</span>
+                        <CheckCircle size={16} className="text-brand-orange flex-shrink-0" />
+                        <span className="text-sm text-black">{detail}</span>
                       </div>
                     ))}
                   </div>
