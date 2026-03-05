@@ -22,7 +22,7 @@ const ServicesGrid = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#0A0A0A]" data-testid="services-section">
+    <section className="py-24 bg-white" data-testid="services-section">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ const ServicesGrid = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-syne font-bold mb-4" data-testid="services-heading">
             What We Do
           </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Full-service digital marketing solutions for businesses in Uttarakhand and beyond
           </p>
         </motion.div>
@@ -53,18 +53,18 @@ const ServicesGrid = () => {
               >
                 <Link
                   to={`/services/${service.slug}`}
-                  className="block h-full group relative overflow-hidden glass-panel hover:border-neon-cyan/50 transition-all duration-300 p-6"
+                  className="block h-full group relative overflow-hidden bg-white border border-gray-200 hover:border-brand-blue hover:shadow-lg transition-all duration-300 p-6 rounded-lg"
                   data-testid={`service-card-${service.slug}`}
                 >
                   <div className="flex flex-col h-full">
-                    <div className="mb-4 w-12 h-12 flex items-center justify-center glass-panel group-hover:bg-neon-cyan/10 transition-colors">
-                      <Icon size={24} className="text-neon-cyan" />
+                    <div className="mb-4 w-12 h-12 flex items-center justify-center bg-gradient-to-br from-brand-blue to-brand-orange rounded-lg group-hover:scale-110 transition-transform">
+                      <Icon size={24} className="text-white" />
                     </div>
-                    <h3 className="text-lg font-syne font-bold mb-2 group-hover:text-neon-cyan transition-colors">
+                    <h3 className="text-lg font-syne font-bold mb-2 text-black group-hover:text-brand-blue transition-colors">
                       {service.name}
                     </h3>
-                    <p className="text-sm text-white/60 mb-4 flex-grow">{service.desc}</p>
-                    <div className="flex items-center text-neon-cyan text-sm group-hover:gap-2 transition-all">
+                    <p className="text-sm text-gray-600 mb-4 flex-grow">{service.desc}</p>
+                    <div className="flex items-center text-brand-orange text-sm group-hover:gap-2 transition-all">
                       <span>Learn More</span>
                       <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -84,7 +84,7 @@ const ServicesGrid = () => {
         >
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 px-8 py-4 btn-secondary group"
+            className="inline-flex items-center gap-2 px-8 py-4 btn-secondary group rounded-lg"
             data-testid="view-all-services-btn"
           >
             <span>View All Services</span>

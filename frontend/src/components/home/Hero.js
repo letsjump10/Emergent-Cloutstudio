@@ -32,9 +32,9 @@ const Hero = () => {
             className="text-4xl sm:text-5xl lg:text-7xl font-syne font-bold mb-8 leading-tight"
             data-testid="hero-headline"
           >
-            <span className="bg-black text-white px-4 py-2 inline-block mb-4">Scale Your Business with</span>
+            Scale Your Business with
             <br />
-            <span className="gradient-accent text-white px-4 py-2 inline-block">Marketing on Autopilot</span>
+            Marketing on Autopilot
           </motion.h1>
 
           <motion.p

@@ -9,7 +9,7 @@ const StatsStrip = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-neon-cyan/10 via-purple-500/10 to-neon-cyan/10 border-y border-white/5" data-testid="stats-section">
+    <section className="py-16 bg-gradient-to-r from-blue-50 via-white to-orange-50 border-y border-gray-100" data-testid="stats-section">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -22,10 +22,15 @@ const StatsStrip = () => {
               className="text-center"
               data-testid={`stat-${index}`}
             >
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-syne font-bold text-neon-cyan mb-2">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-syne font-bold mb-2" style={{
+                background: 'linear-gradient(135deg, #2563EB 0%, #F97316 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
                 {stat.value}
               </div>
-              <div className="text-sm sm:text-base text-white/60">{stat.label}</div>
+              <div className="text-sm sm:text-base text-gray-600">{stat.label}</div>
             </motion.div>
           ))}
         </div>
