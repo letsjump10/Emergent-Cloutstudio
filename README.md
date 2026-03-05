@@ -30,17 +30,15 @@ A high-conversion, futuristic website for a digital marketing agency based in Ro
 Edit `/app/backend/.env`:
 
 ```bash
-# Required: Add your Resend API key for email notifications
-RESEND_API_KEY="re_your_actual_api_key_here"
+# Optional: Add your Resend API key for email notifications
+RESEND_API_KEY=""
 
-# Optional: Change sender email (default works in test mode)
+# Email notification settings (works without Resend for testing)
 SENDER_EMAIL="onboarding@resend.dev"
-
-# Where lead notifications are sent
 NOTIFICATION_EMAIL="hello@cloutstudio.co"
 ```
 
-**Get Resend API Key:**
+**Get Resend API Key (Optional):**
 1. Sign up at https://resend.com
 2. Go to API Keys → Create API Key
 3. Copy the key (starts with `re_`)
@@ -50,12 +48,12 @@ After adding the key, restart backend:
 sudo supervisorctl restart backend
 ```
 
-### 2. Google Analytics & Meta Pixel
+### 2. Analytics Configuration
 
-Edit `/app/frontend/public/index.html`:
+**✅ CONFIGURED - Google Analytics:** `G-C0EYWY6QQ8`
+**✅ CONFIGURED - Meta Pixel:** `344294245`
 
-- Uncomment Google Analytics section and replace `G-XXXXXXXXXX` with your tracking ID
-- Uncomment Meta Pixel section and replace `YOUR_PIXEL_ID` with your pixel ID
+Both tracking codes are active in `/app/frontend/public/index.html`
 
 ### 3. Company Details
 
