@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" data-testid="hero-section">
-      {/* Background Grid */}
-      <div className="absolute inset-0 grid-overlay opacity-30" />
-      
-      {/* Gradient Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-neon-cyan/20 rounded-full blur-[120px] animate-float" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50" data-testid="hero-section">
+      {/* Decorative Elements */}
+      <div className="absolute top-20 right-10 w-72 h-72 bg-brand-blue/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-32 md:py-40">
         <motion.div
@@ -22,28 +20,28 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-6 inline-block px-4 py-2 glass-panel"
+            className="mb-6 inline-block px-4 py-2 bg-white border border-gray-200 rounded-full shadow-sm"
           >
-            <p className="text-neon-cyan text-sm font-medium uppercase tracking-wider">Roorkee's Premier Digital Marketing Agency</p>
+            <p className="gradient-text text-sm font-medium uppercase tracking-wider">Roorkee's Premier Digital Marketing Agency</p>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-syne font-bold mb-8 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-7xl font-syne font-bold mb-8 leading-tight text-gray-900"
             data-testid="hero-headline"
           >
             Scale Your Business with
             <br />
-            <span className="text-neon-cyan">Marketing on Autopilot</span>
+            <span className="gradient-text">Marketing on Autopilot</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-lg sm:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
             data-testid="hero-subheadline"
           >
             We help businesses in Roorkee, Haridwar, Dehradun, and across India get more leads, sales, and growth.
@@ -58,7 +56,7 @@ const Hero = () => {
           >
             <Link
               to="/contact"
-              className="px-8 py-4 btn-primary text-base w-full sm:w-auto flex items-center justify-center gap-2 group"
+              className="px-8 py-4 btn-primary text-base w-full sm:w-auto flex items-center justify-center gap-2 group rounded-lg"
               data-testid="hero-cta-primary"
             >
               <span>Get Free Strategy Call</span>
@@ -67,7 +65,7 @@ const Hero = () => {
             
             <a
               href="tel:9740959176"
-              className="px-8 py-4 btn-secondary text-base w-full sm:w-auto flex items-center justify-center gap-2"
+              className="px-8 py-4 btn-secondary text-base w-full sm:w-auto flex items-center justify-center gap-2 rounded-lg"
               data-testid="hero-cta-secondary"
             >
               <Phone size={20} />
@@ -80,39 +78,23 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="mt-16 flex flex-wrap items-center justify-center gap-8 text-white/50 text-sm"
+            className="mt-16 flex flex-wrap items-center justify-center gap-8 text-gray-500 text-sm"
           >
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-neon-cyan rounded-full" />
+              <div className="w-2 h-2 bg-brand-blue rounded-full" />
               <span>Trusted by 50+ Businesses</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-neon-cyan rounded-full" />
+              <div className="w-2 h-2 bg-brand-orange rounded-full" />
               <span>Based in Roorkee, UK</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-neon-cyan rounded-full" />
+              <div className="w-2 h-2 bg-brand-blue rounded-full" />
               <span>Proven Results</span>
             </div>
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-2">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-1 h-2 bg-neon-cyan rounded-full"
-          />
-        </div>
-      </motion.div>
     </section>
   );
 };

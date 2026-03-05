@@ -40,14 +40,15 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"
         },
-        neon: {
-          cyan: '#00F0FF',
-          blue: '#007AFF',
-          violet: '#7000FF',
+        brand: {
+          blue: '#2563EB',
+          orange: '#F97316',
+          'blue-light': '#3B82F6',
+          'orange-light': '#FB923C',
         },
         surface: {
-          DEFAULT: '#0A0A0A',
-          highlight: '#121212',
+          DEFAULT: '#F9FAFB',
+          highlight: '#F3F4F6',
         },
       },
       fontFamily: {

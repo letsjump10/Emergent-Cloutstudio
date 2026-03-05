@@ -20,7 +20,7 @@ import MobileCtaBar from "./components/MobileCtaBar";
 function App() {
   return (
     <HelmetProvider>
-      <div className="App min-h-screen bg-[#030303] text-white">
+      <div className="App min-h-screen bg-white text-gray-900">
         <BrowserRouter>
           <Navbar />
           <Routes>

@@ -5,7 +5,7 @@ A high-conversion, futuristic website for a digital marketing agency based in Ro
 ## Features
 
 - **Modern Tech Stack:** React + FastAPI + MongoDB
-- **Futuristic UI:** Dark theme with cyan neon accents, glassmorphism effects
+- **Clean Professional UI:** White background with blue & orange gradient brand palette
 - **11 Services:** Complete digital marketing solutions
 - **Lead Generation:** Forms with MongoDB storage + Resend email notifications
 - **Case Studies:** 6 detailed case studies with results
@@ -143,10 +143,11 @@ curl -X POST https://your-app.preview.emergentagent.com/api/leads \
 ## Design System
 
 **Colors:**
-- Background: #030303, #0A0A0A
-- Neon Cyan: #00F0FF
-- Electric Blue: #007AFF
-- Deep Violet: #7000FF
+- Background: White (#FFFFFF)
+- Primary Blue: #2563EB
+- Primary Orange: #F97316
+- Gradient: Blue to Orange (135deg)
+- Text: Gray-900 (#111827), Gray-600 (#4B5563)
 
 **Typography:**
 - Headings: Syne (Bold 700, 800)
@@ -154,9 +155,9 @@ curl -X POST https://your-app.preview.emergentagent.com/api/leads \
 - Mono: JetBrains Mono (Regular 400)
 
 **Components:**
-- Glass panels: bg-white/5 backdrop-blur-xl border-white/10
-- Neon glow: shadow-[0_0_20px_rgba(0,240,255,0.3)]
-- Buttons: Skewed design with uppercase text
+- Cards: White background with gray-200 border, subtle shadow
+- Gradient text: Blue to orange linear gradient
+- Buttons: Blue/orange gradient primary, blue outline secondary
 
 ## Performance
 

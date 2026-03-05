@@ -28,7 +28,7 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'glass-panel py-3' : 'bg-transparent py-5'
+          isScrolled ? 'bg-white border-b border-gray-200 shadow-sm py-3' : 'bg-white/95 backdrop-blur-sm py-5'
         }`}
         data-testid="main-navbar"
       >
@@ -36,8 +36,8 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-2" data-testid="logo-link">
               <div className="text-2xl font-syne font-bold">
-                <span className="text-neon-cyan">CLOUT</span>
-                <span className="text-white"> STUDIO</span>
+                <span className="gradient-text">CLOUT</span>
+                <span className="text-gray-900"> STUDIO</span>
               </div>
             </Link>
 
@@ -50,15 +50,15 @@ const Navbar = () => {
                   data-testid={`nav-${link.name.toLowerCase()}`}
                   className={`relative text-sm font-medium transition-colors duration-300 ${
                     location.pathname === link.path
-                      ? 'text-neon-cyan'
-                      : 'text-white/70 hover:text-white'
+                      ? 'text-brand-blue'
+                      : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
                   {link.name}
                   {location.pathname === link.path && (
                     <motion.div
                       layoutId="navbar-indicator"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-neon-cyan"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 gradient-accent"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -69,14 +69,14 @@ const Navbar = () => {
             <div className="hidden lg:flex items-center space-x-4">
               <a
                 href="tel:9740959176"
-                className="px-6 py-2 btn-secondary text-sm"
+                className="px-6 py-2 btn-secondary text-sm rounded-lg"
                 data-testid="nav-call-btn"
               >
                 <span>Call Now</span>
               </a>
               <Link
                 to="/contact"
-                className="px-6 py-2 btn-primary text-sm"
+                className="px-6 py-2 btn-primary text-sm rounded-lg"
                 data-testid="nav-get-quote-btn"
               >
                 <span>Get Quote</span>
@@ -86,7 +86,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden text-white p-2"
+              className="lg:hidden text-gray-900 p-2"
               data-testid="mobile-menu-toggle"
               aria-label="Toggle menu"
             >
@@ -107,7 +107,7 @@ const Navbar = () => {
             className="fixed inset-0 z-40 lg:hidden"
             data-testid="mobile-menu"
           >
-            <div className="absolute inset-0 bg-black/90 backdrop-blur-xl">
+            <div className="absolute inset-0 bg-white">
               <div className="flex flex-col items-center justify-center h-full space-y-8">
                 {navLinks.map((link) => (
                   <Link
@@ -116,8 +116,8 @@ const Navbar = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`text-2xl font-syne font-bold transition-colors ${
                       location.pathname === link.path
-                        ? 'text-neon-cyan'
-                        : 'text-white hover:text-neon-cyan'
+                        ? 'gradient-text'
+                        : 'text-gray-900 hover:text-brand-blue'
                     }`}
                   >
                     {link.name}
@@ -126,14 +126,14 @@ const Navbar = () => {
                 <div className="flex flex-col space-y-4 mt-8">
                   <a
                     href="tel:9740959176"
-                    className="px-8 py-3 btn-secondary text-center"
+                    className="px-8 py-3 btn-secondary text-center rounded-lg"
                   >
                     <span>Call Now</span>
                   </a>
                   <Link
                     to="/contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="px-8 py-3 btn-primary text-center"
+                    className="px-8 py-3 btn-primary text-center rounded-lg"
                   >
                     <span>Get Quote</span>
                   </Link>
