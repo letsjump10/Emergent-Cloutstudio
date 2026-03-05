@@ -1,0 +1,131 @@
+{
+  "brand_identity": {
+    "name": "Clout Studio",
+    "location": "Roorkee, Uttarakhand",
+    "vibe": "Futuristic, Premium, High-Conversion, Automation-First",
+    "archetype": "The Visionary Architect",
+    "emotional_tone": "Competent, Cutting-edge, Reliable, Local Trust"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Syne, sans-serif",
+      "weights": ["700", "800"],
+      "usage": "Hero titles, Section headers, Big stats",
+      "letter_spacing": "tracking-tight"
+    },
+    "body": {
+      "font_family": "DM Sans, sans-serif",
+      "weights": ["400", "500", "700"],
+      "usage": "Paragraphs, navigation, buttons, small text",
+      "letter_spacing": "tracking-normal"
+    },
+    "mono": {
+      "font_family": "JetBrains Mono, monospace",
+      "weights": ["400"],
+      "usage": "Technical specs, code snippets, decorative labels"
+    }
+  },
+  "colors": {
+    "background": {
+      "main": "#030303",
+      "surface": "#0A0A0A",
+      "surface_highlight": "#121212"
+    },
+    "primary": {
+      "neon_cyan": "#00F0FF",
+      "electric_blue": "#007AFF",
+      "deep_violet": "#7000FF"
+    },
+    "text": {
+      "primary": "#EDEDED",
+      "secondary": "#A1A1AA",
+      "muted": "#52525B"
+    },
+    "gradients": {
+      "hero_glow": "linear-gradient(135deg, rgba(0,240,255,0.2) 0%, rgba(112,0,255,0.2) 100%)",
+      "glass_surface": "linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)"
+    },
+    "borders": {
+      "glass": "rgba(255, 255, 255, 0.1)",
+      "neon": "rgba(0, 240, 255, 0.5)"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "className": "bg-white/5 backdrop-blur-xl border border-white/10",
+      "usage": "Cards, Sticky Nav, Modals"
+    },
+    "neon_glow": {
+      "className": "shadow-[0_0_20px_rgba(0,240,255,0.3)]",
+      "usage": "Primary Buttons, Active States, Key Highlights"
+    },
+    "grid_overlay": {
+      "description": "Subtle background grid to create technical depth",
+      "css": "background-image: radial-gradient(#1f1f1f 1px, transparent 1px); background-size: 32px 32px;"
+    }
+  },
+  "layout_strategies": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "spacing": "Generous. 2x standard Tailwind spacing. Gap-8 to Gap-16.",
+    "grid_system": "Bento Grid (Asymmetrical) for services. 12-column grid for main layouts."
+  },
+  "components": {
+    "buttons": {
+      "primary": "rounded-none skew-x-[-10deg] bg-cyan-500 text-black font-bold uppercase hover:bg-cyan-400 transition-all shadow-[0_0_15px_rgba(0,240,255,0.5)]",
+      "secondary": "rounded-none skew-x-[-10deg] border border-white/20 text-white hover:border-cyan-500 hover:text-cyan-500 transition-all",
+      "floating": "rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-white shadow-lg"
+    },
+    "cards": {
+      "service_card": "group relative overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-colors duration-300 p-8",
+      "feature_highlight": "bg-gradient-to-br from-white/5 to-transparent border border-white/5 rounded-2xl p-6"
+    }
+  },
+  "image_urls": {
+    "hero_background": "https://images.unsplash.com/photo-1700313238493-954af98df086?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "web_development": "https://images.unsplash.com/photo-1753998941540-081eed4f6397?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "social_media_dashboard": "https://images.unsplash.com/photo-1623307019152-1ee797183f1d?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "seo_growth": "https://images.unsplash.com/photo-1623307019152-1ee797183f1d?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "team_meeting": "https://images.unsplash.com/photo-1758518727707-b023e285b709?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "office_collaboration": "https://images.unsplash.com/photo-1758518729685-f88df7890776?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "3d_libraries": {
+    "recommended": ["framer-motion (mandatory)", "three (optional for hero)", "@react-three/fiber (optional)", "@react-three/drei (optional)"],
+    "implementation_notes": "Use Framer Motion for all UI transitions. Use CSS gradients + noise for backgrounds instead of heavy 3D if performance is a concern. For 'Futuristic' feel, use simple geometry (grids, spinning wireframes) rather than complex models."
+  },
+  "accessibility": {
+    "contrast": "Ensure neon text is readable. Use white for body text, neon only for large headings or accents.",
+    "motion": "Respect prefers-reduced-motion. Animations should be subtle (opacity/transform), not jarring."
+  },
+  "instructions_to_main_agent": [
+    "Install 'syne' and 'dm-sans' via @fontsource or Google Fonts.",
+    "Setup Tailwind config to include the neon colors and custom font families.",
+    "Create a 'Noise' background component to add texture to the dark background.",
+    "Build the 'ServiceGrid' using CSS Grid with asymmetrical spans (Bento style).",
+    "Implement the 'Sticky CTA' for mobile as a priority feature.",
+    "Use the provided image URLs for specific sections.",
+    "For the 'Automation' section, create a visual flow using SVG lines that animate (draw) on scroll.",
+    "Ensure the contact form uses Zod validation and has a 'success' state that looks like a terminal success message."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use 'sonner' for toasts",
+    "Sonner component are located in /app/src/components/ui/sonner.tsx"
+  ]
+}
