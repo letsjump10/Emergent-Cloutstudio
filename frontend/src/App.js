@@ -2,6 +2,7 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import { HelmetProvider } from "react-helmet-async";
+import { Analytics } from "@vercel/analytics/react";
 
 // Pages
 import Home from "./pages/Home";
@@ -36,6 +37,7 @@ function App() {
           <MobileCtaBar />
           <Toaster position="top-right" theme="dark" />
         </BrowserRouter>
+        <Analytics />
       </div>
     </HelmetProvider>
   );
